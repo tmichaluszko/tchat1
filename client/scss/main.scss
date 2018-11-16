@@ -1,0 +1,36 @@
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    background-color: black;
+}
+
+.container {
+    background-color: white;
+    padding: 10px 0px 200px 0px;
+
+}
+
+.image {
+    height: 50px;
+}
+
+.wrapper {
+    width: 80%;
+    padding: 0 5%;
+    margin: 5% 0 0 0;
+}
+
+.list_user {
+    background-color: darkgray;
+    text-decoration: none;
+
+}
+
+.user {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,14 @@
+<template name="list_msg">
+    <h2>Fil de discutions</h2>
+    {{#if messages}}
+    {{#each message in messages}}
+
+    <div class="row justify-content-between border border-dark py-3 px-4 mt-3">
+        {{> single_msg message=message}}
+    </div>
+    {{/each}}
+    {{else}}
+
+    <h3>Il n'y a aucun message à afficher </h3>
+    {{/if}}
+</template>

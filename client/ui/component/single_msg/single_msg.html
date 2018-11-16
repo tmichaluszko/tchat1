@@ -1,0 +1,22 @@
+<template name="single_msg">
+  <div class="avatar">
+    <img src="https://randomuser.me/api/portraits/lego/7.jpg" class="image img-fluid rounded float-left">
+  </div>
+  <div class="message">
+    <div class="js-edit-message">
+      <div class="body">
+        <p stle="white-space: pre">{{message.msg}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="metadata">
+      <div class="date">
+        {{fromNow message.createdAt}}
+      </div>
+      <div class="id">
+        {{getUserPseudo message.ownerId}}
+      </div>
+    </div>
+  </div>
+</template>

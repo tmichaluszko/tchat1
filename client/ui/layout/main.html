@@ -1,0 +1,19 @@
+<template name="main">
+  {{> nav}}
+  <div class="container">
+    <div class="wrapper mx-auto">
+      <h1 class="text-center">Bienvenue sur AppTchat</h1>
+      <!--{{#if currentUser}}
+      {{#if currentUser.profile.pseudo}}
+      {{> accueil}}
+      {{else}}
+      {{>setPseudo}}
+      {{/if}}
+      {{else}}
+      {{> atForm}}
+      {{/if}}-->
+      {{> yield}}
+    </div>
+  </div>
+
+</template>
