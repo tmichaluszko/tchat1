@@ -1,18 +1,17 @@
 <template name="list_users">
-  <div class="d-flex flex-row">
-    <div class="list_user border border-dark text-center">
-      <h2>Liste d'utilisateur</h2>
-      {{#each user in users}}
-      <div class="d-flex flex-row">
-        <ul>
-          <li>
-            <a class="user" href="/message/{{user._id}}">{{
-              user.profile.pseudo
+  <div class="list_user border border-dark text-center">
+    <h2>Liste d'utilisateur</h2>
+    {{#each user in users}}
+    <div class="d-flex flex-row">
+      <ul>
+        <li>
+          <a class="user" href="/message/{{user._id}}">{{
+            user.profile.pseudo
             }}</a>
-          </li>
-        </ul>
-      </div>
-      {{/each}}
+        </li>
+      </ul>
     </div>
+    {{/each}}
   </div>
+
 </template>

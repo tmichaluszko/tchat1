@@ -1,16 +1,13 @@
-Template.message.onCreated(function() {});
+Template.message.onCreated(function () {});
+this.subscribe("getSenderMsg")
+this.subscribe("getRecieverMsg")
+this.subscribe('getContact')
 
 Template.messages.helpers({
-  messagePrive() {
-    let routerUser = Router.current().params.userId;
-    let userId = Meteor.userId();
-    let sender = Newmsg.find({
-      sender: userId
-    }).fetch();
-    let reciever = Newmsg.find({
-      sender: routerUser,
-      reciever: userId
-    }).fetch();
+  conversations() {
+    Conversation.insert({
+
+    })
 
     let allMessage = sender.concat(reciever);
     return allMessage.sort((a, b) => {
