@@ -3,7 +3,7 @@
     {{#each message in messages}}
     <div class=" msg_prv row justify-content-between py-3 px-4 mt-3">
         {{> single_msg message=message}}
-
+        {{getUserPseudo}}
     </div>
     {{/each}}
     {{else}}
