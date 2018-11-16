@@ -11,6 +11,7 @@ Template.list_msg_prv.onCreated(function () {
 
     handler.push(this.subscribe("getSenderMsg", Router.current().params.userId))
     handler.push(this.subscribe("getRecieverMsg", Router.current().params.userId))
+    handler.push(this.subscribe("getContact", Router.current().params.userId))
 
     this.autorun(() => {
         //const isReady = handler.ready();
@@ -25,7 +26,6 @@ Template.list_msg_prv.onCreated(function () {
             let allMessageSorted = allMessage.sort((a, b) => {
                 return a.createdAt - b.createdAt
             })
-            console.log(allMessageSorted)
             this.allMessage.set(allMessageSorted)
         }
     })

@@ -19,3 +19,9 @@ Meteor.publish("getRecieverMsg", function(userId) {
     reciever: Meteor.userId()
   });
 });
+
+Meteor.publish("getContact", function(userId) {
+  return Meteor.users.find({
+    _id: userId
+  });
+});

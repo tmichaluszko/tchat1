@@ -15,7 +15,13 @@
         {{fromNow message.createdAt}}
       </div>
       <div class="id">
+        {{#if message.ownerId}}
         {{getUserPseudo message.ownerId}}
+        {{else}}
+          {{#if message.sender}}
+            {{getUserPseudo message.sender}}
+          {{/if}}
+        {{/if}}
       </div>
     </div>
   </div>
