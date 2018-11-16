@@ -4,6 +4,6 @@ Template.list_users.onCreated(function() {
 
 Template.list_users.helpers({
   users() {
-    return Meteor.users.find({}).fetch();
+    return Meteor.users.find({_id: {$ne :Meteor.userId()}}).fetch();
   }
 });
