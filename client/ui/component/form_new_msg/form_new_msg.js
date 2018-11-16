@@ -6,7 +6,7 @@ Template.form_new_msg.events({
 
     Messages.insert({
         msg: msgVal,
-        createdAt: new Date(),
+        createdAt: Date.now(),
         ownerId: Meteor.userId()
 
       }),

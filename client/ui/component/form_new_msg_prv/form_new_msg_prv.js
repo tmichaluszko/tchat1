@@ -5,7 +5,7 @@ Template.form_new_msg_prv.events({
         let reciever = event.currentTarget.buttonSubmit.attributes["data-userId"].value
         Newmsg.insert({
             msg: msgVal,
-            createdAt: new Date(),
+            createdAt: Date.now(),
             sender: Meteor.userId(),
             reciever: reciever
         })

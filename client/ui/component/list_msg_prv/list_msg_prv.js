@@ -20,10 +20,10 @@ Template.list_msg_prv.onCreated(function () {
         );
         if (areReady) {
 
-            let allMessage = Newmsg.find().fetch();
+            let allMessage = Newmsg.find({}).fetch();
 
             let allMessageSorted = allMessage.sort((a, b) => {
-                return a.date - b.date
+                return a.createdAt - b.createdAt
             })
             console.log(allMessageSorted)
             this.allMessage.set(allMessageSorted)
